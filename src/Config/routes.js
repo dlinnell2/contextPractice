@@ -9,13 +9,13 @@ const routes = [
         component: Dashboard
     },
     {
-        path: '/*',
-        component: NotFound
-    },
-    {
         path: '/',
         component: Login
     },
+    {
+        path: '/*',
+        component: NotFound
+    }
 ]
 
 export default routes
