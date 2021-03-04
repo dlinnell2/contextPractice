@@ -6,20 +6,23 @@ import {
   Switch,
 } from 'react-router-dom';
 import routes from './Config/routes.js';
+import { AuthProvider } from "./Context";
  
 function App() {
   return (
-    <Router>
-      <Switch>
-        {routes.map((route) => (
-          <Route
-            key={route.path}
-            path={route.path}
-            component={route.component}
-          />
-        ))}
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Switch>
+          {routes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              component={route.component}
+            />
+          ))}
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
  
