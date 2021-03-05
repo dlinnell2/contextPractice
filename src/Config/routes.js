@@ -6,15 +6,18 @@ import NotFound from '../Pages/NotFound'
 const routes = [
     {
         path: '/dashboard',
-        component: Dashboard
+        component: Dashboard,
+        isPrivate: true
     },
     {
-        path: '/',
-        component: Login
+        path: '/login',
+        component: Login,
+        isPrivate: false
     },
     {
         path: '/*',
-        component: NotFound
+        component: NotFound,
+        isPrivate: true
     }
 ]
 

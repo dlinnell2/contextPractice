@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import routes from './Config/routes.js';
 import { AuthProvider } from "./Context";
+import AppRoute from './Components/AppRoute';
  
 function App() {
   return (
@@ -14,10 +15,11 @@ function App() {
       <Router>
         <Switch>
           {routes.map((route) => (
-            <Route
+            <AppRoute
               key={route.path}
               path={route.path}
               component={route.component}
+              isPrivate={route.isPrivate}
             />
           ))}
         </Switch>
