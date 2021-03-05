@@ -14,7 +14,7 @@ function Dashboard(props) {
     }
     return (
         <div style={{ padding: 10 }}>
-            <div style={styles.dashboardPage} >
+            <div className={styles.dashboardPage} >
                 <h1>
                     Dashboard
                 </h1>
